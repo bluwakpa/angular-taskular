@@ -9,7 +9,7 @@
     "test": "ng test",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "homepage": "https://bluwakpa.github.io/angular-taskular"
+    "homepage": "https://bluwakpa.github.io/angular-taskular/"
   },
   "private": true,
   "dependencies": {
