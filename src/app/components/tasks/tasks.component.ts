@@ -10,6 +10,8 @@ export class TasksComponent implements OnInit {
 
   tasks:Task[] = [];
 
+  inputTask:string = "";
+
   constructor() { }
 
   ngOnInit(): void {
@@ -34,5 +36,13 @@ export class TasksComponent implements OnInit {
 
   deleteTask(id:number){
     this.tasks = this.tasks.filter((v, i) => i !== id);
+  }
+
+  addTask(){
+    this.tasks.push({
+      content: this.inputTask,
+      completed: false
+    });
+    this.inputTask = ""
   }
 }
