@@ -6,7 +6,9 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "deploy": "gh-pages -d src",
+    "homepage": "https://bluwakpa.github.io/angular-taskular"
   },
   "private": true,
   "dependencies": {
@@ -18,6 +20,7 @@
     "@angular/platform-browser": "~12.2.0",
     "@angular/platform-browser-dynamic": "~12.2.0",
     "@angular/router": "~12.2.0",
+    "gh-pages": "^3.2.3",
     "rxjs": "~6.6.0",
     "tslib": "^2.3.0",
     "tslint": "^6.1.3",
