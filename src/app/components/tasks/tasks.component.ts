@@ -6,14 +6,11 @@ import { Task } from '../../data/task';
   templateUrl: './tasks.component.html',
   styleUrls: ['./tasks.component.css']
 })
+
 export class TasksComponent implements OnInit {
-
-  tasks:Task[] = [];
-
-  inputTask:string = "";
-
+  tasks: Task[] = [];
+  inputTask: string = "";
   constructor() { }
-
   ngOnInit(): void {
     this.tasks = [
       {
@@ -27,18 +24,18 @@ export class TasksComponent implements OnInit {
     ]
   }
 
-  toggleDone(id:number){
+  toggleDone(id: number) {
     this.tasks.map((v, i) => {
       if (i == id) v.completed = !v.completed;
       return v;
     })
   }
 
-  deleteTask(id:number){
+  deleteTask(id: number) {
     this.tasks = this.tasks.filter((v, i) => i !== id);
   }
 
-  addTask(){
+  addTask() {
     this.tasks.push({
       content: this.inputTask,
       completed: false

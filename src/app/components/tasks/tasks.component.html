@@ -1,20 +1,11 @@
-
-            <div class="tasks">
-                <form (submit)="addTask()">
-                    <input type="text"
-                            name="inputTask"
-                            placeholder="Enter Task"
-                            class="task-input"
-                            [(ngModel)]="inputTask"
-                            >
-                    <input class="task-submit" type="submit" value="Add Task" />
-                </form>
-                <div *ngFor="let task of tasks; let i = index;" class="task {{ (task.completed ? 'done' : '') }}" >
-                    <div class="id">{{ i }}</div>
-                    <div class="content" (click)="toggleDone(i)">{{ task.content }}</div>
-                    <button class="delete" (click)="deleteTask(i)">Remove</button>
-            
-                </div>
-            </div>
-
-
+<div class="tasks">
+    <form (submit)="addTask()">
+        <input type="text" name="inputTask" placeholder="Enter Task" class="task-input" [(ngModel)]="inputTask">
+        <input class="task-submit" type="submit" value="Add Task" />
+    </form>
+    <div *ngFor="let task of tasks; let i = index;" class="task {{ (task.completed ? 'done' : '') }}">
+        <div class="id">{{ i }}</div>
+        <div class="content" (click)="toggleDone(i)">{{ task.content }}</div>
+        <button class="delete" (click)="deleteTask(i)">Remove</button>
+    </div>
+</div>
